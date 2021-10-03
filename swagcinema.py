@@ -38,10 +38,10 @@ def main():
         limit= 6 #number of udp connection tests (6x30secs = 3mins) before trying to restart gmod
         verbose=False #False for no verbose output, #True for verbose output
         while True:
-            while(check_swampsv(verbose)):
+            while(check_online(verbose)):
                 down=0
                 if(verbose):
-                    print(f"\n{BGR}[+] swamp.sv is up!{BRESET}")
+                    print(f"\n{BGR}[+] internet is up!{BRESET}")
                 start= time.time() #start time elapsed
 
                 while(check_udp_connection(verbose)):
@@ -89,18 +89,18 @@ def main():
                     time.sleep(interval*2)
                 time.sleep(interval)
 
-def check_swampsv(verbose):
+def check_online(verbose):
     url='https://1.1.1.1'
     if(verbose):
         print(f"\n{BCY}[+] CHECKING INTERNET{BRESET}")
     try:
             requests.get(url).status_code
             if(verbose):
-                print('[+] swamp.sv online')
+                print('[+] online')
             return True
     except:
             if(verbose):
-                print('[+] swamp.sv offline')
+                print('[+] offline')
             return False
 
 
