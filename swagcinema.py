@@ -149,7 +149,7 @@ if __name__ == '__main__':
     args1=' -applaunch 4000 +connect 35.208.78.209:27015 -windowed -w 1600 -h 900'
     args2=''
     while(choice == '0'):
-            print(f"\n{BGR}[+] Swag Cinema Connection Script\n{BRESET}1) Active\n2) Idle\n3) Idle Minimalist\n")
+            print(f"\n{BGR}[+] Swag Cinema Connection Script\n{BRESET}1) Active\n2) Idle\n3) Idle Minimalist\n4) Textmode\n")
             choice=input()
             if(choice == '1'):
                 print(f"\n{BGR}[+] Active Selected!{BRESET}")
@@ -160,6 +160,10 @@ if __name__ == '__main__':
             elif(choice == '3'):
                 print(f"\n{BGR}[+] Idle Minimalist Selected!{BRESET}")
                 args1=' -applaunch 4000 +connect 35.208.78.209:27015 -windowed -safe' #-safe -w 1080 -h 700
+                args2=' -nosrgb -noaddons -nochromium  -windowed -novid +contimes 0 +con_notifytime 0'
+            elif(choice == '4'):
+                print(f"\n{BGR}[+] Textmode Selected!{BRESET}")
+                args1=' -applaunch 4000 +connect 35.208.78.209:27015 -windowed -safe -textmode' #-safe -w 1080 -h 700
                 args2=' -nosrgb -noaddons -nochromium  -windowed -novid +contimes 0 +con_notifytime 0'
             else:
                 choice='0'
