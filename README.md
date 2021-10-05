@@ -22,4 +22,4 @@ and you're good to go!
 cd C:\path\to\SwagScript\
 python swagcinema.py
 ```
-you can also right click the .py file, create a shortcut to have an executable file directly
+you can also right click the .py file, create a shortcut to have an executable file directly (for this to work, do not install more than one version of python on windows)
