@@ -11,13 +11,16 @@ And it will restart gmod automatically. I recommend testing it for a few hours t
 
 -This script uses 4 libraries, and you can get them with pip (it comes with python) from a powershell terminal
 ```
-WIN+X  a (to launch a terminal with admin privileges)
+press `WIN+X` and then press `a` (to launch a terminal with admin privileges)
+type the line below and hit enter
 PS> pip install --upgrade pip
+type the line below and hit enter
 PS> pip install scapy colorama psutil requests
 ```
 also get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-1.31.exe
-and you're good to go!
+change steampath on line 149 to your current steam directory
 
+After you finished the steps above, open the powershell terminal again as administrator and type the lines below
 ```
 cd C:\path\to\SwampScript\
 python swamp.py
