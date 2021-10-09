@@ -2,6 +2,7 @@
 #get python3 on your windows machine (use microsoft store to do that)
 #pip install --upgrade pip
 #pip install scapy colorama psutil requests
+#change steampath on line 149 to your steam directory
 #and you're good to go!
 
 import psutil
