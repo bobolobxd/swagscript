@@ -13,7 +13,6 @@ from scapy.all import *
 import socket
 import requests
 import threading
-from threading import Event
 hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
 
