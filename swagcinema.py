@@ -12,6 +12,8 @@ import time
 from scapy.all import *
 import socket
 import requests
+import threading
+from threading import Event
 hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
 
@@ -29,6 +31,7 @@ BRE   = Back.RED
 BCY  = Back.CYAN
 BRESET = Back.RESET
 
+
 def main():
         endUP=time.time() # just in case the script starts before gmod is launched
         down=0
@@ -38,10 +41,10 @@ def main():
         limit= 6 #number of udp connection tests (6x30secs = 3mins) before trying to restart gmod
         verbose=False #False for no verbose output, #True for verbose output
         while True:
-            while(check_online(verbose)):
+            while(check_swampsv(verbose)):
                 down=0
                 if(verbose):
-                    print(f"\n{BGR}[+] internet is up!{BRESET}")
+                    print(f"\n{BGR}[+] swamp.sv is up!{BRESET}")
                 start= time.time() #start time elapsed
 
                 while(check_udp_connection(verbose)):
@@ -56,6 +59,7 @@ def main():
                             print("")
                     print(f"{BGR}Uptime [",days,':',time.strftime("%H:%M:%S", time.gmtime(secs)),']\r', end="")
                     time.sleep(interval/3)
+                    
                 else:
                     if(verbose):
                         print(f"\n{BRE}[+] UDP CONNECTION IS DOWN{BRESET}")
@@ -78,7 +82,7 @@ def main():
                     print("")
                 down +=1
                 if(verbose):
-                    print(f"\n{BRE}[+] internet is down!{BRESET}")
+                    print(f"\n{BRE}[+] swamp.sv is down!{BRESET}")
                 else:
                     endDN=time.time()
                     secs=int(endDN-endUP) #to measure downtime, you start from the end of the uptime
@@ -89,28 +93,26 @@ def main():
                     time.sleep(interval*2)
                 time.sleep(interval)
 
-def check_online(verbose):
-    url='https://1.1.1.1'
+def check_swampsv(verbose):
+    url='https://swamp.sv'
     if(verbose):
         print(f"\n{BCY}[+] CHECKING INTERNET{BRESET}")
     try:
             requests.get(url).status_code
             if(verbose):
-                print('[+] online')
+                print('[+] swamp.sv online')
             return True
     except:
             if(verbose):
-                print('[+] offline')
+                print('[+] swamp.sv offline')
             return False
-
-
 
 
 
 def check_udp_connection(verbose):
     if(verbose):
         print(f"\n{BCY}[+] CHECKING UDP{BRESET}")
-    a=sniff(timeout=5,count=10,filter="udp and host 35.208.78.209") #check the udp connection to the server
+    a=sniff(timeout=5,count=10,filter="udp and host 208.103.169.51") #check the udp connection to the server
     if(len(a) <= 3):  ####IF NO UDP CONNECTION THEN
         if(verbose):
             print(f"\n{BRE}[+]",a,f"{BRESET}")
@@ -144,30 +146,27 @@ def restart_gmod(verbose):
 
 if __name__ == '__main__':
     choice='0'
-    steampath='C:\Program Files (x86)\Steam\steam.exe'
+    steampath='e:\Steam\steam.exe'
     #steampath='Z:\Steam\steam.exe'
-    args1=' -applaunch 4000 +connect 35.208.78.209:27015 -windowed -w 1600 -h 900'
+    args1=' -applaunch 4000 +connect cinema.swamp.sv -windowed -w 1920 -h 1080'
     args2=''
     while(choice == '0'):
-            print(f"\n{BGR}[+] Swag Cinema Connection Script\n{BRESET}1) Active\n2) Idle\n3) Idle Minimalist\n4) Textmode\n")
+            print(f"\n{BGR}[+] Swamp Cinema Connection Script\n{BRESET}1) Active\n2) Idle\n3) Idle Minimalist\n")
             choice=input()
             if(choice == '1'):
                 print(f"\n{BGR}[+] Active Selected!{BRESET}")
-                args2=' '
+                args2=''
             elif(choice == '2'):
                 print(f"\n{BGR}[+] Idle Selected!{BRESET}")
                 args2=' -nosrgb -noaddons -nochromium'
             elif(choice == '3'):
                 print(f"\n{BGR}[+] Idle Minimalist Selected!{BRESET}")
-                args1=' -applaunch 4000 +connect 35.208.78.209:27015 -windowed -safe' #-safe -w 1080 -h 700
-                args2=' -nosrgb -noaddons -nochromium  -windowed -novid +contimes 0 +con_notifytime 0'
-            elif(choice == '4'):
-                print(f"\n{BGR}[+] Textmode Selected!{BRESET}")
-                args1=' -applaunch 4000 +connect 35.208.78.209:27015 -windowed -safe -textmode' #-safe -w 1080 -h 700
-                args2=' -nosrgb -noaddons -nochromium  -windowed -novid +contimes 0 +con_notifytime 0'
+                args1=' -applaunch 4000 +connect cinema.swamp.sv ' #-safe -w 1080 -h 700
+                args2=' -nosrgb -noaddons -nochromium -novid -textmode +volume 0'
             else:
                 choice='0'
             fullpath=steampath+args1+args2
             fullpath.split()
             subprocess.Popen(fullpath,shell=False)
     main()
+
