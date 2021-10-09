@@ -19,7 +19,7 @@ also get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-1
 and you're good to go!
 
 ```
-cd C:\path\to\SwagScript\
-python swagcinema.py
+cd C:\path\to\SwampScript\
+python swamp.py
 ```
 you can also right click the .py file, create a shortcut to have an executable file directly (for this to work, do not install more than one version of python on windows)
