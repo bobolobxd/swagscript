@@ -11,10 +11,10 @@ And it will restart gmod automatically. I recommend testing it for a few hours t
 
 -This script uses 4 libraries, and you can get them with pip (it comes with python) from a powershell terminal
 ```
-press `WIN+X` and then press `a` (to launch a terminal with admin privileges)
-type the line below and hit enter
+1. press `WIN+X` and then press `a` (to launch a terminal with admin privileges)
+2. type the line below and hit enter
 PS> pip install --upgrade pip
-type the line below and hit enter
+3. type the line below and hit enter
 PS> pip install scapy colorama psutil requests
 ```
 Also, get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-1.31.exe
@@ -23,10 +23,10 @@ Change steampath on line 149 to your current steam directory
 
 Go to https://raw.githubusercontent.com/bobolobxd/swampscript/main/swamp.py and press ctrl-s and save the script
 
-After you finished the steps above, open the powershell terminal again as administrator and type the lines below
+After you finished the steps above, open the powershell terminal again as administrator (step 1 above) and type the lines below
 ```
-Type the line below in the terminal to go to the directory where you saved the script Ex. c:\users\windowsuername\downloads
+1. Type the line below in the terminal to go to the directory where you saved the script Ex. c:\users\windowsuername\downloads
 PS> cd C:\path\to\SwampScript\
-then type the line below and select which mode you want
+2. Then type the line below and select which mode you want
 python swamp.py
 ```
