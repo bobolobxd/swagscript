@@ -17,12 +17,15 @@ PS> pip install --upgrade pip
 type the line below and hit enter
 PS> pip install scapy colorama psutil requests
 ```
-also get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-1.31.exe
-change steampath on line 149 to your current steam directory
+Also, get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-1.31.exe
 
+Change steampath on line 149 to your current steam directory
+
+Go to https://raw.githubusercontent.com/bobolobxd/swampscript/main/swamp.py and press ctrl-s and save the script
 After you finished the steps above, open the powershell terminal again as administrator and type the lines below
 ```
-cd C:\path\to\SwampScript\
+Type the line below in the terminal to go to the directory where you saved the script Ex. c:\users\windowsuername\downloads
+PS> cd C:\path\to\SwampScript\
+then type the line below and select which mode you want
 python swamp.py
 ```
-you can also right click the .py file, create a shortcut to have an executable file directly (for this to work, do not install more than one version of python on windows)
