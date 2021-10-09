@@ -22,6 +22,7 @@ Also, get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-
 Change steampath on line 149 to your current steam directory
 
 Go to https://raw.githubusercontent.com/bobolobxd/swampscript/main/swamp.py and press ctrl-s and save the script
+
 After you finished the steps above, open the powershell terminal again as administrator and type the lines below
 ```
 Type the line below in the terminal to go to the directory where you saved the script Ex. c:\users\windowsuername\downloads
