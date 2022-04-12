@@ -112,7 +112,7 @@ def check_swampsv(verbose):
 def check_udp_connection(verbose):
     if(verbose):
         print(f"\n{BCY}[+] CHECKING UDP{BRESET}")
-    a=sniff(timeout=5,count=10,filter="udp and host 141.193.68.7") #check the udp connection to the server
+    a=sniff(timeout=5,count=10,filter="udp and host cinema.swamp.sv") #check the udp connection to the server
     if(len(a) <= 3):  ####IF NO UDP CONNECTION THEN
         if(verbose):
             print(f"\n{BRE}[+]",a,f"{BRESET}")
