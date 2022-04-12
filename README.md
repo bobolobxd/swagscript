@@ -19,9 +19,10 @@ PS> pip install scapy colorama psutil requests
 ```
 Also, get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-1.31.exe
 
-Change steampath on line 149 to your current steam directory
 
 Go to https://raw.githubusercontent.com/bobolobxd/swampscript/main/swamp.py and press ctrl-s and save the script
+
+Change steampath on line 149 to your current steam directory
 
 After you finished the steps above, open the powershell terminal again as administrator (step 1 above) and type the lines below
 ```
