@@ -1,8 +1,8 @@
 # Disclaimer
-So far this python version is the most effective one, it can detect if you have an internet connection,
-it can detect if the UDP connection to the server is made or not,
-it will kill both gmod and steam if the UDP connection is lost,
-And it will restart gmod automatically. I recommend testing it for a few hours to see if it behaves as intended. And most importantly as i've seen, it does not run out of memory space after running it for extended periods of time like powershell's badly-written-packet-sniffing-utility pktmon does.
+
+This python script will keep you connected to Swamp Cinema. It can detect if GMOD is closed, the server is down, or if you lost connection the server by sniffing for UDP packets.
+
+Follow the instructions below to get started.
 
 ## this is a script to use only if you have a solid internet connection, do not use it if your internet connection has alot of frequent downtimes
 
@@ -24,10 +24,14 @@ Go to https://raw.githubusercontent.com/bobolobxd/swampscript/main/swamp.py and 
 
 Change steampath on line 149 to your current steam directory
 
-After you finished the steps above, open the powershell terminal again as administrator (step 1 above) and type the lines below
+After you finished the steps above, open the powershell terminal again as administrator (step 1 above) and type the lines below:
 ```
 1. Type the line below in the terminal to go to the directory where you saved the script Ex. c:\users\windowsuername\downloads
 PS> cd C:\path\to\SwampScript\
 2. Then type the line below and select which mode you want
 python swamp.py
 ```
+Modes:
+1. Active: Normal GMOD
+2. Idle: No addons, no chromium
+3. Idle Minmalist: Textmode 
