@@ -5,11 +5,11 @@ This python script will keep you connected to Swamp Cinema. It can detect if GMO
 Follow the instructions below to get started.
 
 # Windows Setup
--get python3 on your windows machine (you can use microsoft store to get it)
+-get python3 on your windows machine (you can use microsoft store to get it https://www.microsoft.com/store/productId/9PJPW5LDXLZ5)
 
--This script uses 4 libraries, and you can get them with pip (it comes with python) from a powershell terminal
+-This script uses 4 libraries, and you can get them with pip (AFTER you install python3) from a powershell terminal:
 ```
-1. press `WIN+X` and then press `a` (to launch a terminal with admin privileges)
+1. press `WINDOWS KEY+X` and then press `a` (to launch a terminal with admin privileges)
 2. type the line below and hit enter
 PS> pip install --upgrade pip
 3. type the line below and hit enter
@@ -20,7 +20,7 @@ Also, get npcap if something doesnt work here https://nmap.org/npcap/dist/npcap-
 
 Go to https://raw.githubusercontent.com/bobolobxd/swampscript/main/swamp.py and press ctrl-s and save the script
 
-Change steampath on line 149 to your current steam directory
+Change steampath on line 149 to where your steam.exe is located
 
 After you finished the steps above, open the powershell terminal again as administrator (step 1 above) and type the lines below:
 ```
