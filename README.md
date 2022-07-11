@@ -4,8 +4,6 @@ This python script will keep you connected to Swamp Cinema. It can detect if GMO
 
 Follow the instructions below to get started.
 
-## this is a script to use only if you have a solid internet connection, do not use it if your internet connection has alot of frequent downtimes
-
 # Windows Setup
 -get python3 on your windows machine (you can use microsoft store to get it)
 
