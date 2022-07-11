@@ -148,7 +148,7 @@ if __name__ == '__main__':
     choice='0'
     steampath='e:\Steam\steam.exe'
     #steampath='Z:\Steam\steam.exe'
-    args1=' -applaunch 4000 +connect cinema.swamp.sv -windowed -w 1920 -h 1080'
+    args1=' -applaunch 4000 +connect cinema.swamp.sv'
     args2=''
     while(choice == '0'):
             print(f"\n{BGR}[+] Swamp Cinema Connection Script\n{BRESET}1) Active\n2) Idle\n3) Idle Minimalist\n")
@@ -161,7 +161,6 @@ if __name__ == '__main__':
                 args2=' -nosrgb -noaddons -nochromium'
             elif(choice == '3'):
                 print(f"\n{BGR}[+] Idle Minimalist Selected!{BRESET}")
-                args1=' -applaunch 4000 +connect cinema.swamp.sv ' #-safe -w 1080 -h 700
                 args2=' -nosrgb -noaddons -nochromium -novid -textmode +volume 0'
             else:
                 choice='0'
